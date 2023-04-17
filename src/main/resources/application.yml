@@ -1,0 +1,30 @@
+# set h2 properties
+spring:
+  h2:
+    console:
+      enabled: true
+
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/h2db/initask
+    driverClassName: org.h2.Driver
+    username: sa
+    password: 1
+
+  # jpa
+  jpa:
+    hibernate:
+      ddl-auto: create
+    generate-ddl: true
+    show-sql: true
+
+  # logging
+  logging:
+    level:
+      org.springframework.web: DEBUG
+      org.hibernate.sql: DEBUG
+      jpa: DEBUG
+
+jwt:
+  secret: d95c25624fe9380367cd329fa197fe53c59bd0230292cc40f790fca87aa46b755c75495a0b8498aab976b511896ce4fa7735ada392be40f146f4e2bbeecec275
+
+
